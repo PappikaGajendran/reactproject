@@ -5,7 +5,7 @@ function Sidebar() {
     <div className="w-64 h-screen fixed top-0 left-0 bg-slate-900 text-white p-5">
 
       <h1 className="text-2xl font-bold mb-8">
-        My App
+        Notes
       </h1>
 
       <div className="flex flex-col gap-3">
@@ -14,39 +14,44 @@ function Sidebar() {
           to="/"
           className={({ isActive }) =>
             `p-3 rounded-lg ${
-              isActive
-                ? "bg-slate-700"
-                : "hover:bg-slate-700"
+              isActive ? "bg-slate-700" : "hover:bg-slate-700"
             }`
           }
         >
-          Dashboard
+          All Notes
         </NavLink>
 
         <NavLink
-          to="/profile"
+          to="/studies"
           className={({ isActive }) =>
             `p-3 rounded-lg ${
-              isActive
-                ? "bg-slate-700"
-                : "hover:bg-slate-700"
+              isActive ? "bg-slate-700" : "hover:bg-slate-700"
             }`
           }
         >
-          Profile
+          Studies
         </NavLink>
 
         <NavLink
-          to="/settings"
+          to="/work"
           className={({ isActive }) =>
             `p-3 rounded-lg ${
-              isActive
-                ? "bg-slate-700"
-                : "hover:bg-slate-700"
+              isActive ? "bg-slate-700" : "hover:bg-slate-700"
             }`
           }
         >
-          Settings
+          Work
+        </NavLink>
+
+        <NavLink
+          to="/personal"
+          className={({ isActive }) =>
+            `p-3 rounded-lg ${
+              isActive ? "bg-slate-700" : "hover:bg-slate-700"
+            }`
+          }
+        >
+          Personal
         </NavLink>
 
       </div>

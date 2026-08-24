@@ -1,12 +1,12 @@
 import { useState } from "react";
 import NotesEditor from "./NotesEditor";
 
-function Work({ notes, addNote, deleteNote, updateNote }) {
+function Personal({ notes, addNote, deleteNote, updateNote }) {
 
   const [editingNote, setEditingNote] = useState(null);
 
-  const workNotes = notes.filter(
-    (note) => note.category === "Work"
+  const personalNotes = notes.filter(
+    (note) => note.category === "Personal"
   );
 
   const handleEdit = (note) => {
@@ -21,20 +21,20 @@ function Work({ notes, addNote, deleteNote, updateNote }) {
     <div className="ml-64 pt-16 min-h-screen bg-gray-100 p-6">
 
       <h1 className="text-3xl font-bold mb-6">
-        Work
+        Personal
       </h1>
 
       <NotesEditor
         addNote={addNote}
         updateNote={updateNote}
-        category="Work"
+        category="Personal"
         editingNote={editingNote}
         cancelEdit={cancelEdit}
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-        {workNotes.map((note) => (
+        {personalNotes.map((note) => (
 
           <div
             key={note.id}
@@ -77,4 +77,4 @@ function Work({ notes, addNote, deleteNote, updateNote }) {
   );
 }
 
-export default Work;
+export default Personal;
